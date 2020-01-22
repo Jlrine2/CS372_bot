@@ -6,8 +6,7 @@ from logger import update_log
 from webapp import app
 client = discord.Client()
 
-BotID =
-
+BotID = ''
 
 # on every message
 @client.event
