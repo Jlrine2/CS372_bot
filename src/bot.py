@@ -1,11 +1,12 @@
 import discord
 import os
 import re
+import threadding
 from logger import update_log
-
+from webapp import app
 client = discord.Client()
 
-BotID = 'NTM5NjI2MjYyNzUxMDg0NTQ0.Xh_sRg.PcaMvw_XssFJDwVmLnDpYD2TUjY'
+BotID =
 
 
 # on every message
@@ -23,10 +24,10 @@ async def on_message(message):
         return
     if message.content.startswith('!log'):
         try:
-        parsed_message = re.match(r'\!log\ (?P<value>\d+) (minutes|^$)(?P<message>.*)', message.content)
-        update_log(message.author.display_name, 
+            parsed_message = re.match(r'\!log\ (?P<value>\d+) (minutes|^$)(?P<message>.*)', message.content)
+            update_log(message.author.display_name, 
                 parsed_message.group('value'),
-                parsed_message.group('message')
+                parsed_message.group('message'),
                 )
         except Exception as e:
             message.channel.send(f"error while logging {e}")
@@ -42,3 +43,4 @@ async def on_ready():
     print('-----')
 
 client.run(BotID)
+app.run()
