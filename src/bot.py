@@ -5,7 +5,7 @@ from logger import update_log
 
 client = discord.Client()
 
-BotID = 'NTM5NjI2MjYyNzUxMDg0NTQ0.Xh_sRg.PcaMvw_XssFJDwVmLnDpYD2TUjY'
+BotID 
 
 
 # on every message
